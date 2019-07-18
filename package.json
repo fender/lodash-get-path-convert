@@ -2,12 +2,12 @@
 	"name": "lodash-get-path-convert",
 	"displayName": "lodash-get-path-convert",
 	"description": "This extension converts any Lodash get() calls that have string paths to arrays.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "fender",
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/fender/lodash-get-path-convert.git"
-  },
+		"type": "git",
+		"url": "https://github.com/fender/lodash-get-path-convert.git"
+	},
 	"engines": {
 		"vscode": "^1.36.0"
 	},
@@ -19,10 +19,12 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [{
-			"command": "extension.lodashGetPathConvert",
-			"title": "Convert Lodash get() string paths to arrays (selected lines)"
-		}]
+		"commands": [
+			{
+				"command": "extension.lodashGetPathConvert",
+				"title": "Convert Lodash get() string paths to arrays (selected lines)"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
