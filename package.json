@@ -2,7 +2,7 @@
 	"name": "lodash-get-path-convert",
 	"displayName": "lodash-get-path-convert",
 	"description": "This extension converts any Lodash get() calls that have string paths to arrays.",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "fender",
 	"repository": {
 		"type": "git",
