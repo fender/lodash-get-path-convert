@@ -24,12 +24,13 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 
 		lines.forEach((line, i) => {
-			if (/get\(.+ *, *' *(.+\..+) *' *,*.*\)/g.test(line)) {
-				const groups = line.match(/get\(.+ *, *(' *.+\..+ *') *,*.*\)/);
+			if (/get\(.+ *, *'(.+\.[^']+)+',*.*\)/g.test(line)) {
+				const groups = line.match(/get\(.+ *, *'(.+\.[^']+)+',*.*\)/);
 				if (groups && groups.length > 0) {
+					console.log(groups);
 					const array = groups[1].split('.');
-					const replace = array.join(', ');
-					lines[i] = lines[i].replace(groups[1], `[${replace}]`);
+					const replace = array.join('\', \'');
+					lines[i] = lines[i].replace(`'${groups[1]}'`, `['${replace}']`);
 				}
 			}
 		});
