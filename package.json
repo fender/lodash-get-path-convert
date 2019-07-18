@@ -4,6 +4,10 @@
 	"description": "This extension converts any Lodash get() calls that have string paths to arrays.",
 	"version": "0.0.1",
 	"publisher": "fender",
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/fender/lodash-get-path-convert.git"
+  },
 	"engines": {
 		"vscode": "^1.36.0"
 	},
