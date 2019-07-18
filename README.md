@@ -1,6 +1,6 @@
 VSCode extension that converts any Lodash get() calls that have string paths to arrays.
 
-## Did you know?
+## Features
 
 ```
 get(foo, 'bar.baz');
