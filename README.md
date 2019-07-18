@@ -1,6 +1,6 @@
 VSCode extension that converts any Lodash get() calls that have string paths to arrays.
 
-## Did you know?
+## Features
 
 ```
 get(foo, 'bar.baz');
@@ -10,7 +10,7 @@ This looks for a key of `foo["bar.baz"]` first and then splits into parts of `fo
 
 If you do not care about the former, it's more efficient to pass an array as the second parameter to `get()`.
 
-\!\[feature X\]\(images/convert.gif\)
+![animation](images/convert.gif)
 
 Simply select the "Convert Lodash get()..." from the command pallete after selecting code.
 
