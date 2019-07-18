@@ -27,9 +27,8 @@ export function activate(context: vscode.ExtensionContext) {
 			if (/get\(.+ *, *'(.+\.[^']+)+',*.*\)/g.test(line)) {
 				const groups = line.match(/get\(.+ *, *'(.+\.[^']+)+',*.*\)/);
 				if (groups && groups.length > 0) {
-					console.log(groups);
 					const array = groups[1].split('.');
-					const replace = array.join('\', \'');
+					const replace = array.join('\', \'').replace('[', '').replace(']', '');
 					lines[i] = lines[i].replace(`'${groups[1]}'`, `['${replace}']`);
 				}
 			}
